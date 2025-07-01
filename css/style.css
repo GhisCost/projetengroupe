@@ -3,3 +3,8 @@
     margin: 0;
     box-sizing: border-box;
 }
+.container{
+    background-color: #daa520;
+    opacity: 0.2;
+    height: 100vh;
+}
