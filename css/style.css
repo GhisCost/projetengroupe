@@ -1,6 +1,301 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+html, body {
+  height: 100%;
+}
+body {
+  background-color: #f8edd2;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+}
+.font2 {
+  font-family: "Josefin Sans", sans-serif;
+}
+.font1 {
+  font-family: "Dancing Script", cursive;
+}
+nav {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+ 
+}
+#menu-btn {
+  background-color: #7b3f00;
+  color: white;
+  border: #daa520 1px solid;
+  padding: 8px 16px;
+  font-size: 1.2em;
+  font-family: "Josefin Sans", sans-serif;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #7b3f00;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: 1px solid #ccc;
+  min-width: 120px;
+  display: none;
+}
+#submenu.open {
+  display: block;
+}
+#submenu li {
+  padding: 8px 16px;
+}
+#submenu li a {
+  text-decoration: none;
+  color: #daa520;
+  display: block;
+}
+#submenu li a:hover {
+  background: #ddd;
+}
+header > div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%;
+  min-height: 120px;
+}
+header img {
+  width: 100px;
+  height: auto;
+  margin-left: 10px;
+  flex-shrink: 0;
+}
+header h1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 1.5em;
+  color: #daa520;
+  margin: 0;
+  white-space: nowrap;
+}
+#connexion {
+  background-color: #7b3f00;
+  color: #daa520;
+  text-decoration: none;
+  padding: 8px 16px;
+  font-size: 1.2em;
+  font-family: "Josefin Sans", sans-serif;
+  border-radius: 4px;
+  border: #daa520 1px solid;
+}
+#nave {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#logo {
+  background-color: #7b3f00;
+}
+#nave > a {
+  color: #daa520;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 1.2em;
+  font-family: "Josefin Sans", sans-serif;
+  border: #daa520 1px solid;
+  background-color: #7b3f00;
+  padding-top: 13px;
+}
+#bg {
+  background-image: url(../img/effeilchoco.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 160px;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+h2 {
+  font-family: "Josefin Sans", sans-serif;
+  color: #daa520;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 60px;
+}
+#description {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f2deae;
+}
+#formulaire {
+  width: 90%;
+  margin: 20px auto 0 auto;
+  padding: 20px;
+  background: #f2deae;
+}
+#formulaire .row {
+  display: flex;
+  gap: 10px;
+}
+#formulaire .row input {
+  flex: 1;
+  min-width: 0;
+  width: auto;
+}
+#formulaire input,
+#formulaire button {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  font-family: "Josefin Sans", sans-serif;
+  border: 1px solid #7b3f00;
+  border-radius: 4px;
+}
+#formulaire button {
+  background: #7b3f00;
+  color: #daa520;
+  margin: 20px auto 0 auto;
+  display: block;
+  cursor: pointer;
+}
+#formulaire button:hover {
+  background: #daa520;
+  color: #7b3f00;
+}
+#formulaire input[type="email"],
+#formulaire input[type="tel"] {
+  box-sizing: border-box;
+}
+footer {
+  background: #7b3f00;
+  padding: 30px 0 20px 0;
+  text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+  width: 100%;
+}
+footer > div {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+footer a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  margin: 0 20px;
+}
+
+/* Tablette (max-width: 1024px) */
+@media (max-width: 1024px) {
+  body, h1, h2, p, a, input, button {
+    font-size: 95%;
+  }
+  footer a {
+    font-size: 1em;
+  }
+  #menu-btn {
+    display: block;
+  }
+  #submenu {
+    display: none;
+  }
+  #submenu.open {
+    display: block;
+  }
+  #nave {
+    display: none;
+  }
+  #connexion {
+    display: block;
+    position: static;
+    margin-left: auto;
+    margin-right: 10px;
+  }
+  nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  body, h1, h2, p, a, input, button {
+    font-size: 90%;
+  }
+  footer a {
+    font-size: 0.95em;
+  }
+}
+
+/* Menu horizontal pour ordinateur */
+@media (min-width: 1025px) {
+  nav {
+    width: 100vw; /* Prend toute la largeur de la fenêtre */
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    position: relative;
+  }
+  #menu-btn, #submenu {
+    display: none !important;
+  }
+  #nave {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    background: #7b3f00;
+    padding: 10px 0;
+  }
+  #nave > a {
+    display: inline-block;
+    color: #daa520;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: "Josefin Sans", sans-serif;
+    border: none;
+    background: none;
+    padding: 10px 20px;
+    transition: color 0.2s;
+  }
+  #nave > a:hover {
+    color: #fff;
+  }
+  #connexion {
+    display: none !important;
+  }
+  #bg h2 {
+    font-size: 2.5em;
+    padding: 30px 0;
+  }
+}
+
+/* Taille du h2 sur tablette */
+@media (max-width: 1024px) and (min-width: 769px) {
+  #bg h2 {
+    font-size: 2em;
+    padding: 20px 0;
+  }
+}
+
+
