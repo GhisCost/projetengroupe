@@ -179,7 +179,7 @@
       width: 100px;
       height: 25px;
       text-decoration: none;
-      color: white;
+      color: #daa520;
       text-align: center;
     }
   }
@@ -284,9 +284,6 @@
       a {
         width: 20%;
         height: 25px;
-        text-decoration: none;
-        color: white;
-        text-align: center;
         font-size: 1.05em;
       }
       a:nth-child(4) {
@@ -413,9 +410,6 @@
       a {
         width: 20%;
         height: 25px;
-        text-decoration: none;
-        color: white;
-        text-align: center;
         font-size: 1.05em;
       }
       a:nth-child(4) {
