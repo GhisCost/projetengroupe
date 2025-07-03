@@ -4,14 +4,14 @@
   margin: 0;
   box-sizing: border-box;
 }
-html, body {
+html,
+body {
   height: 100%;
 }
 body {
   background-color: #f8edd2;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+  height: 100%;
 }
 main {
   flex: 1;
@@ -22,48 +22,84 @@ main {
 .font1 {
   font-family: "Dancing Script", cursive;
 }
+
 nav {
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; 
+  width: fit-content;
+  /* border-right: 3px solid #daa520;
+      border-bottom: 3px solid #daa520; */
+border: #daa520 solid 2px;
  
+  #menu-btn {
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 40px;
+    background-color: #7b3f00;
+    color: #daa520;
+    border: none;
+    text-transform: uppercase;
+    div {
+      width: 10px;
+      height: 10px;
+      border-right: 2px solid #daa520;
+      border-bottom: 2px solid #daa520;
+      transform: rotateZ(-45deg);
+      margin: 5px 0 10px 5px;
+    }
+  }
+  #menu-btn:focus {
+    color: white;
+    border-bottom: none;
+    div {
+      border-color: white;
+      transform: rotateZ(45deg);
+    }
+  }
+  /* changer le couleur dans le sous menu c en bas */
+  #submenu {
+  
+    position: absolute;
+    top: 100%;
+left: -2px;
+    background: #7b3f00;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 104px;
+    display: none;
+    border: none;
+    border-right: 2px solid #daa520;
+    border-bottom: 2px solid #daa520;
+    border-left: 2px solid #daa520;
+    li {
+      padding: 8px 16px;
+      width: 100px;
+    }
+    li > a {
+      text-decoration: none;
+      color: #daa520;
+      /* display: block; */
+      font-family: "Josefin Sans", sans-serif;
+    }
+    li a:focus {
+      color: white;
+    }
+  }
 }
-#menu-btn {
+#acc{
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-around;
+  margin: 15px 10px;
+}
+#co {
+  border-left: #daa520 solid 2px;
+}
+header {
   background-color: #7b3f00;
-  color: white;
-  border: #daa520 1px solid;
-  padding: 8px 16px;
-  font-size: 1.2em;
-  font-family: "Josefin Sans", sans-serif;
-  border-radius: 4px;
-  cursor: pointer;
-}
-#submenu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #7b3f00;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  border: 1px solid #ccc;
-  min-width: 120px;
-  display: none;
-}
-#submenu.open {
-  display: block;
-}
-#submenu li {
-  padding: 8px 16px;
-}
-#submenu li a {
-  text-decoration: none;
-  color: #daa520;
-  display: block;
-}
-#submenu li a:hover {
-  background: #ddd;
 }
 header > div {
   display: flex;
@@ -80,17 +116,12 @@ header img {
   flex-shrink: 0;
 }
 header h1 {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   font-family: "Dancing Script", cursive;
   font-optical-sizing: auto;
   font-weight: 400;
-  font-size: 1.5em;
+  font-size: 3.5em;
   color: #daa520;
-  margin: 0;
-  white-space: nowrap;
+  margin: auto;
 }
 #connexion {
   background-color: #7b3f00;
@@ -99,24 +130,22 @@ header h1 {
   padding: 8px 16px;
   font-size: 1.2em;
   font-family: "Josefin Sans", sans-serif;
-  border-radius: 4px;
-  border: #daa520 1px solid;
+  border: #daa520 solid 2px;
+  height: 44px;
 }
 #nave {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  width: 100vw;
 }
-#logo {
-  background-color: #7b3f00;
-}
+
 #nave > a {
   color: #daa520;
   text-decoration: none;
   padding: 10px;
   font-size: 1.2em;
   font-family: "Josefin Sans", sans-serif;
-  border: #daa520 1px solid;
+
   background-color: #7b3f00;
   padding-top: 13px;
 }
@@ -133,22 +162,27 @@ h2 {
   font-family: "Josefin Sans", sans-serif;
   color: #daa520;
   text-align: center;
-  width: 80%;
-  margin: 0 auto;
-  padding-top: 60px;
+  margin: auto;
+font-size: 2em;
+position: relative;
+top: 20%;
 }
 #description {
   width: 90%;
   margin: 0 auto;
   margin-top: 20px;
   padding: 20px;
-  background-color: #f2deae;
+  background-color: rgba(218, 165, 32, 0.2);
+  text-align: center;
+  color: #7b3f00;
+      font-family: "Josefin Sans", sans-serif;
+  
 }
 #formulaire {
   width: 90%;
   margin: 20px auto 0 auto;
   padding: 20px;
-  background: #f2deae;
+  background: rgba(218, 165, 32, 0.2);
 }
 #formulaire .row {
   display: flex;
@@ -161,12 +195,13 @@ h2 {
 }
 #formulaire input,
 #formulaire button {
-  width: 100%;
+   width: 100%; 
   margin-bottom: 10px;
   padding: 8px;
   font-family: "Josefin Sans", sans-serif;
-  border: 1px solid #7b3f00;
-  border-radius: 4px;
+  border-radius: 25px;
+  border: none;
+  text-align: center;
 }
 #formulaire button {
   background: #7b3f00;
@@ -174,6 +209,7 @@ h2 {
   margin: 20px auto 0 auto;
   display: block;
   cursor: pointer;
+  width: 25%;
 }
 #formulaire button:hover {
   background: #daa520;
@@ -189,6 +225,8 @@ footer {
   text-align: center;
   font-family: "Josefin Sans", sans-serif;
   width: 100%;
+  margin-top: 5%;
+  
 }
 footer > div {
   display: flex;
@@ -196,15 +234,21 @@ footer > div {
   margin-bottom: 10px;
 }
 footer a {
-  color: #fff;
+  color: #daa520;
   text-decoration: none;
   font-size: 1.2em;
-  margin: 0 20px;
+  margin: 0 29px;
 }
 
 /* Tablette (max-width: 1024px) */
 @media (max-width: 1024px) {
-  body, h1, h2, p, a, input, button {
+  body,
+  h1,
+  
+  p,
+  a,
+  input,
+  button {
     font-size: 95%;
   }
   footer a {
@@ -223,8 +267,6 @@ footer a {
     display: none;
   }
   #connexion {
-    display: block;
-    position: static;
     margin-left: auto;
     margin-right: 10px;
   }
@@ -238,7 +280,13 @@ footer a {
 
 /* Mobile (max-width: 768px) */
 @media (max-width: 768px) {
-  body, h1, h2, p, a, input, button {
+  body,
+  h1,
+  
+  p,
+  a,
+  input,
+  button {
     font-size: 90%;
   }
   footer a {
@@ -249,14 +297,13 @@ footer a {
 /* Menu horizontal pour ordinateur */
 @media (min-width: 1025px) {
   nav {
-    width: 100vw; /* Prend toute la largeur de la fenêtre */
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    position: relative;
+    width: 80vw; /* Prend toute la largeur de la fenêtre */
+    border: none;
+    margin: auto;
+    margin-top: 15px;
   }
-  #menu-btn, #submenu {
+  #menu-btn,
+  #submenu {
     display: none !important;
   }
   #nave {
@@ -266,6 +313,8 @@ footer a {
     align-items: center;
     background: #7b3f00;
     padding: 10px 0;
+    border-radius: 5px;
+    width: 80vw;
   }
   #nave > a {
     display: inline-block;
@@ -273,7 +322,7 @@ footer a {
     text-decoration: none;
     font-size: 1.2em;
     font-family: "Josefin Sans", sans-serif;
-    border: none;
+    /* border: none; */
     background: none;
     padding: 10px 20px;
     transition: color 0.2s;
@@ -288,6 +337,20 @@ footer a {
     font-size: 2.5em;
     padding: 30px 0;
   }
+  input{
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+    color: #7b3f00;
+    font-size: 1.5em;
+  }
+  #formulaire input,
+  #formulaire button{
+    border-radius: 5px;
+} 
+  #formulaire input{
+  font-size: 1.5em;
+}
 }
 
 /* Taille du h2 sur tablette */
@@ -297,5 +360,3 @@ footer a {
     padding: 20px 0;
   }
 }
-
-
