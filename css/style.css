@@ -347,6 +347,8 @@ footer a {
   #formulaire input,
   #formulaire button{
     border-radius: 5px;
+    height: 65px;
+    font-size: 1.5em;
 } 
   #formulaire input{
   font-size: 1.5em;
