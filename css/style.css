@@ -45,8 +45,10 @@
       position: relative;
       display: inline-block;
       width: fit-content;
-      border-right: 3px solid #daa520;
-      border-bottom: 3px solid #daa520;
+      /* border-right: 3px solid #daa520;
+      border-bottom: 3px solid #daa520; */
+      border: 2px solid #daa520;
+      margin: 15px 10px;
       #menu-btn {
         display: flex;
         align-items: center;
@@ -54,23 +56,26 @@
         width: 100px;
         height: 40px;
         background-color: #7b3f00;
-        color: white;
+        color: #daa520;
         border: none;
         text-transform: uppercase;
         div {
           width: 10px;
           height: 10px;
-          border-right: 2px solid white;
-          border-bottom: 2px solid white;
+          border-right: 2px solid #daa520;
+          border-bottom: 2px solid #daa520;
           transform: rotateZ(45deg);
           margin: 5px 0 10px 5px;
         }
+      }
+      #menu-btn:focus{
+        color: white;
       }
       /* changer le couleur dans le sous menu c en bas */
       #submenu {
         position: absolute;
         top: 100%;
-        left: 0;
+        left: -2px;
         background: #7b3f00;
         padding: 0;
         margin: 0;
@@ -79,19 +84,23 @@
         display: none;
         border: none;
         width: fit-content;
-        border-right: 3px solid #daa520;
-        border-bottom: 3px solid #daa520;
+        border-right: 2px solid #daa520;
+        border-bottom: 2px solid #daa520;
+        border-left: 2px solid #daa520;
         li {
           padding: 8px 16px;
           width: 100px;
         }
         li > a {
           text-decoration: none;
-          color: white;
+          color: #daa520;
           /* display: block; */
         }
         li a:hover {
           background: #ddd;
+        }
+        a:focus{
+          color: white;
         }
       }
     }
@@ -129,7 +138,7 @@
           background-color: #7b3f00;
           a {
             text-decoration: none;
-            color: white;
+            color: #daa520;
           }
         }
       }
@@ -159,7 +168,7 @@
           background-color: #7b3f00;
           a {
             text-decoration: none;
-            color: white;
+            color: #daa520;
           }
         }
       }
@@ -209,8 +218,8 @@
           div {
             width: 15px;
             height: 15px;
-            border-right: 3px solid white;
-            border-bottom: 3px solid white;
+            border-right: 3px solid #daa520;
+            border-bottom: 3px solid #daa520;
             padding-bottom: 5px;
           }
         }
@@ -339,7 +348,7 @@
             text-align: center;
             a {
               text-decoration: none;
-              color: white;
+              color: #daa520;
               font-size: 1.5em;
             }
           }
