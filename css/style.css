@@ -115,7 +115,7 @@
         a:focus {
           color: white;
           }
-          
+
         }
       }
     }
@@ -145,6 +145,7 @@
           text-align: center;
           border: none;
           border-radius: 25px;
+          color: #7b3f00;
         }
         button {
           width: 30%;
@@ -176,6 +177,7 @@
           text-align: center;
           border: none;
           border-radius: 25px;
+          color: #7b3f00;
         }
         button {
           width: 30%;
