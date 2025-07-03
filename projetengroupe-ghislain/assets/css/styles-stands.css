@@ -8,36 +8,61 @@
 
 /* nav de louis */
 
-nav {
+#nav_mobile {
   position: relative;
   display: inline-block;
+  width: fit-content;
+  border: 2px solid #daa520;
 }
 #menu-btn {
   background-color: #7b3f00;
   color: #daa520;
-  border-color: #daa520;
-  border-radius: 5px;
-  padding: 5px 10px;
+  border: none;
+  height: 40px;
   font-size: 1em;
   font-family: "Josefin Sans", sans-serif;
+  min-width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+#menu-btn div {
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #daa520;
+  border-bottom: 2px solid #daa520;
+  transform: rotateZ(-45deg);
+  margin: 5px 0 10px 5px;
+}
+
+#menu-btn:focus {
+        color: white;
+        div {
+          border-color: white;
+          transform: rotateZ(45deg);
+        }
+}
 /* changer le couleur dans le sous menu c en bas */
 #submenu {
   position: absolute;
   top: 100%;
-  left: 0;
+  left: -2px;
   background: #7b3f00;
   padding: 0;
   margin: 0;
   list-style: none;
-  border: 1px solid #daa520;
+  border-right: 2px solid #daa520;
+  border-bottom: 2px solid #daa520;
+  border-left: 2px solid #daa520;
   min-width: 120px;
+  width: fit-content;
   display: none;
   font-family: "Josefin Sans", sans-serif;
 }
 #submenu li {
   padding: 8px 16px;
+  width: 120px;
 }
 #submenu li a {
   text-decoration: none;
@@ -62,9 +87,12 @@ nav {
 #titre {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
   gap: 20px;
   background-color: #7b3f00;
   font-size: 1.1em;
+  border-bottom: 3px solid #daa520;
+  align-items: center;
 }
 
 #logo {
@@ -92,8 +120,8 @@ h1 {
   background-color: #7b3f00;
   color: #daa520;
   border-color: #daa520;
-  border-radius: 5px;
-  padding: 5px 10px;
+  height: 40px;
+  width: 120px;
   font-size: 1em;
   font-family: "Josefin Sans", sans-serif;
 }
@@ -205,6 +233,7 @@ h1 {
 footer {
   background-color: #7b3f00;
   text-align: center;
+  border-top: 3px solid #daa520;
 }
 
 footer ul {
@@ -275,6 +304,10 @@ footer a {
   }
 }
 @media (min-width: 992px) {
+  #titre {
+    border-bottom: 4px solid #daa520;
+  }
+
   h1 {
     font-size: 90px;
   }
@@ -315,7 +348,7 @@ footer a {
     background-color: #7b3f00;
     text-align: center;
     width: 80%;
-  border-radius: 5px;
+    border-radius: 5px;
   }
   #nav_ordi ul {
     display: flex;
@@ -331,13 +364,28 @@ footer a {
     text-decoration: none;
     color: #daa520;
     font-family: "Josefin Sans", sans-serif;
-    padding: 0px 10px;
-    font-size: 20px;
+    padding: 10px 20px;
+    font-size: 1.5em;
+  }
+
+  footer {
+    border-top: 4px solid #daa520;
+  }
+
+  #btn_co {
+    display: none;
+  }
+  #navetco {
+    justify-content: center;
+  }
+
+  #co_ordi {
+    border-left: 1px solid #daa520;
   }
 }
 
-@media (min-width:1200px) {
-.grdboitestand {
+@media (min-width: 1200px) {
+  .grdboitestand {
     height: 150px;
     padding-top: 60px;
   }
@@ -353,13 +401,12 @@ footer a {
   }
 }
 
-@media (min-width:1400px) {
-
-  h1 {
-    font-size: 160px;
+@media (min-width: 1400px) {
+  #logo {
+    width: 10%;
   }
 
-    #plan {
+  #plan {
     font-size: 1.9em;
   }
 
