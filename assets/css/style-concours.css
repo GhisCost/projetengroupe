@@ -104,10 +104,10 @@ header {
 header > div {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  position: relative;
+  justify-content: space-evenly;
   width: 100%;
   min-height: 120px;
+    margin:0px 25px;
 }
 header img {
   width: 100px;
@@ -352,6 +352,12 @@ footer a {
 } 
   #formulaire input{
   font-size: 1.5em;
+}
+#logo {
+  width:140px;
+}
+#logo img{ 
+  width :100%;
 }
 }
 

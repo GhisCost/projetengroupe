@@ -37,11 +37,11 @@
 }
 
 #menu-btn:focus {
-        color: white;
-        div {
-          border-color: white;
-          transform: rotateZ(45deg);
-        }
+  color: white;
+  div {
+    border-color: white;
+    transform: rotateZ(45deg);
+  }
 }
 /* changer le couleur dans le sous menu c en bas */
 #submenu {
@@ -109,6 +109,7 @@ h1 {
   text-align: center;
   color: #daa520;
   padding-bottom: 5px;
+  font-weight: 400;
 }
 #navetco {
   display: flex;
@@ -312,6 +313,10 @@ footer a {
     font-size: 90px;
   }
 
+  #logo {
+    width: 140px;
+  }
+
   #plan {
     font-size: 1.3em;
   }
@@ -402,9 +407,7 @@ footer a {
 }
 
 @media (min-width: 1400px) {
-  #logo {
-    width: 10%;
-  }
+  
 
   #plan {
     font-size: 1.9em;
